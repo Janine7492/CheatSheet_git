@@ -1,0 +1,101 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-color: lightgray;
+}
+
+header {
+    padding-bottom: 20px;
+    padding-top: 20px;
+    background-color: dimgray;
+    background-image: url("../img/git_figure.avif");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 250px;
+    height: 150px;
+}
+
+header h1 {
+    display: inline-block;
+    width: 400px;
+    color: white;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+header h2 {
+    width: 400px;
+    color: white;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+header nav ul {
+    color: white;
+    margin-left: 20px;
+    list-style: none;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    /* margin-bottom: 10px; */
+    font-size: 12px;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main span {
+    font-weight: bold;
+}
+
+main section {
+    margin: 0 20px 20px 20px;
+    padding-top: 20px;
+}
+
+main section h2 {
+    font-size: 25px;
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+main section article {
+    padding-left: 30px;
+}
+
+main section article ol li {
+    margin-bottom: 10px;
+}
+
+main section article ol li ul {
+    padding-left: 40px;
+}
+
+main section article ol li ul li {
+    margin-bottom: 10px;
+}
+
+main section article ul li {
+    margin-bottom: 10px;
+}
+
+main section article ul li ul {
+    padding-left: 40px;
+}
+
+main section article ul li ul li {
+    margin-bottom: 10px;
+}
+
+/* .bold {
+    font-weight: bold;
+} */

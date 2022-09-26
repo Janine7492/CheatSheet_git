@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>CheatSheet Git</title>
+</head>
+
+<body>
+    <header>
+        <h1>CheatSheet Git</h1>
+        <nav>
+            <ul>
+                <li><a href="#verbindung">Verbindung VS Code</a></li>
+                <li><a href="#upload">Upload von Projekten</a></li>
+                <li><a href="./html/Alphabet-Uebersicht.html">Alphabetische Übersicht von Befehlen</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2 id="verbindung">Verbindung von VS Code zu git</h2>
+            <article>
+                <ol>
+                    <li><span>VS Code</span> öffnen</li>
+                    <li><span>Terminal</span> -> New Terminal</li>
+                    <li>Eingabe im Terminal: <span>git --version</span>
+                        <ul>
+                            <li>Wird eine Version angezeigt, ist Git bereits installiert</li>
+                            <li>Ist noch keine Version installiert, öffnet sich ein Pop-up-Fenster zur Installation</li>
+                        </ul>
+                    </li>
+                    <li>Eingabe: <span>git config --global user.name "username"</span>
+                        <ul>
+                            <li>Hier wird als "username" der jew. Username des zu verbindenden Github Profils angegeben
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Eingabe: <span>git config --global user.email "e-mail adresse"</span>
+                        <ul>
+                            <li>Hier wird als "e-mail address" die mit dem Github Profil verbundene E-Mail-Adresse
+                                angegeben</li>
+                        </ul>
+                    </li>
+                    <li>Eingabe: <span>git config --global --list</span>
+                        <ul>
+                            <li>Mit diesem Befehl können die zuvor angegebenen Daten noch einmal abgerufen und geprüft
+                                werden</li>
+                        </ul>
+                    </li>
+                </ol>
+            </article>
+        </section>
+        <section>
+            <h2 id="upload">Upload von Projekten in Git/GitHub</h2>
+            <article>
+                <ol>
+                    <li><span>Repository erstellen</span>
+                        <ul>
+                            <li>In <span>Github</span> über das "+" "New repository" auswählen</li>
+                            <li>Im sich öffnenden Fenster einen Namen vergeben und das repository erstellen</li>
+                            <li>Es öffnet sich eine neue Ansicht mit Optionen zum Übertragen. Hier kopiert man sich die
+                                3 Zeilen unter dem Punkt <span>"...or push an existing repository from the command
+                                    line"</span></li>
+                        </ul>
+                    </li>
+                    <li>Im <span>VS Code</span> das zu übertragende Projekt öffnen</li>
+                    <li>Terminal öffnen</li>
+                    <li>Eingabe: <span>git init</span>
+                        <ul>
+                            <li>Zur Initialisierung der Übertragung in ein bestehendes Repository</li>
+                        </ul>
+                    </li>
+                    <li>Eingabe: <span>git add .</span>
+                        <ul>
+                            <li>Hinzufügen aller zugehörigen Files des ausgewählten Projekts - Achtung: alles was
+                                aktuell in VS Code geöffnet ist, wird zusammengefasst und als ein Projekt übertragen!
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Eingabe: <span>git commit -m "Name für den Upload vergeben"</span>
+                        <ul>
+                            <li>Vergabe eines Namens für den aktuellen Upload - im Falle von Aktualisierungen eines
+                                bereits existierenden Projekts ggf. angeben, was angepasst wurde</li>
+                        </ul>
+                    </li>
+                    <li>Einfügen der <span>kopierten Zeilen</span> aus Github
+                        <ul>
+                            <li>
+                                <span>git remote add origin https://github.com/"username"/"Name Repository".git</span>
+                                <ul>
+                                    <li>Fügt ein Remote-Repository hinzu</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span>git branch -M main</span>
+                                <ul>
+                                    <li>Definiert die Branch des Uploads</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span>git push -u origin main</span>
+                                <ul>
+                                    <li>Überträgt schließlich die lokalen Daten in das Repository auf Github</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>Ggf. Username und PAT eingeben, um die Verbindung zu autorisieren</li>
+                    <li>Sobald der Upload erfolgt ist, wird dies im Terminal angezeigt und nach refresh der Github Seite
+                        ist das Repository ebenfalls online zu sehen</li>
+                </ol>
+            </article>
+        </section>
+    </main>
+</body>
+
+</html>
